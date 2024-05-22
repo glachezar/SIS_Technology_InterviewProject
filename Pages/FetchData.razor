@@ -1,48 +1,40 @@
 ﻿@page "/fetchdata"
 
-<PageTitle>Weather forecast</PageTitle>
+<PageTitle>ALL Products</PageTitle>
 
 @using SIS_Technology_InterviewProject.Data
-@inject ProductService ForecastService
+@inject ProductService ProductService
 
-<h1>Weather forecast</h1>
+<h1>Products</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
 
-@if (forecasts == null)
+@if (productList == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <DxGrid Data="@productList" CssClass="table" KeyboardNavigationEnabled="true">
+        <Columns>
+            <DxGridCommandColumn Width="25%">   </DxGridCommandColumn>
+            <DxGridDataColumn FieldName="ProductName" Caption="Product Name" Width="25%"/>
+            <DxGridDataColumn FieldName="Category" Width="25%" />
+            <DxGridDataColumn FieldName="UnitPrice" DisplayFormat="C" Width="25%" />
+            <DxGridDataColumn FieldName="DateAdded" Caption="Date Added" DisplayFormat="dd/MM/yyyy" Width="25%" />
+        </Columns>
+        <SearchBoxTemplate>
+            <DxTextBox />
+            <DxButton Text="Search" />
+        </SearchBoxTemplate>
+    </DxGrid>
 }
 
 @code {
-    private Product[]? forecasts;
+    private IEnumerable<Product>? productList;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        productList = await ProductService.GetAllProductsAsync();
     }
 }
