@@ -3,7 +3,7 @@
 <PageTitle>Weather forecast</PageTitle>
 
 @using SIS_Technology_InterviewProject.Data
-@inject WeatherForecastService ForecastService
+@inject ProductService ForecastService
 
 <h1>Weather forecast</h1>
 
@@ -39,7 +39,7 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private Product[]? forecasts;
 
     protected override async Task OnInitializedAsync()
     {
