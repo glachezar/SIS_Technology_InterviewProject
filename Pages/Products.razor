@@ -1,0 +1,37 @@
+﻿@page "/fetchdata"
+
+@using SIS_Technology_InterviewProject.Data
+@inject ProductService ProductService
+
+<PageTitle>ALL Products</PageTitle>
+
+<h1>Products</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (productList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <DxGrid Data="@productList" KeyboardNavigationEnabled="true">
+        <Columns>
+            <DxGridCommandColumn Width="25%">   
+            </DxGridCommandColumn>
+            <DxGridDataColumn FieldName="ProductName" Caption="Име на продукта" MinWidth="100"/>
+            <DxGridDataColumn FieldName="Category" Caption="Категория" Width="25%" />
+            <DxGridDataColumn FieldName="UnitPrice" Caption="Цена" DisplayFormat="C2" Width="10%" />
+            <DxGridDataColumn FieldName="DateAdded" Caption="Дата на добавяне" DisplayFormat="dd/MM/yyyy" Width="25%" />
+        </Columns>
+    </DxGrid>
+}
+
+@code {
+    private IEnumerable<Product>? productList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        productList = await ProductService.GetAllProductsAsync();
+    }
+}
