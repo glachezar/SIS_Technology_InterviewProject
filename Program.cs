@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using SIS_Technology_InterviewProject.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<ProductService>();
+builder.Services.AddDevExpressBlazor(config =>
+{
+    config.BootstrapVersion = DevExpress.Blazor.BootstrapVersion.v5;
+});
+builder.WebHost.UseWebRoot("wwwroot");
+builder.WebHost.UseStaticWebAssets();
 
 var app = builder.Build();
 
