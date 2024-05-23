@@ -1,11 +1,5 @@
 using SIS_Technology_InterviewProject.Data;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using System.Threading.Tasks;
-using DevExpress.Blazor.Grid;
 using DevExpress.Blazor;
-using Microsoft.AspNetCore.Components;
-using Abp.Application.Navigation;
 
 namespace SIS_Technology_InterviewProject.Pages;
 
@@ -34,7 +28,10 @@ public partial class TestComponent
         await LoadProducts();
     }
 
-    private void OnRowDeleting()
+    private async Task OnRowDeleting(GridDataItemDeletingEventArgs e)
     {
+        await ProductService.DeleteProductAsync((e.DataItem as Product).Id);
+
+        await LoadProducts();
     }
 }
