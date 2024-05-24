@@ -7,7 +7,9 @@ public partial class TestComponent
 {
     
     private IEnumerable<Product>? productList;
-    DateTime DateTimeValue { get; set; }
+
+    private DateTime DateTimeValue = DateTime.Today;
+
     protected override async Task OnInitializedAsync()
     {
         await LoadProducts();

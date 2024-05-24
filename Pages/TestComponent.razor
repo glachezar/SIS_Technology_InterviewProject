@@ -30,12 +30,14 @@ else
             <DxGridDataColumn FieldName="Category" Caption="Категория" Width="25%"  SortIndex="1" AllowSort="true" />
             <DxGridDataColumn FieldName="UnitPrice" Caption="Цена" DisplayFormat="C2" Width="10%" SortIndex="2" AllowSort="true"/>
             <DxGridDataColumn FieldName="DateAdded" Caption="Дата на добавяне" DisplayFormat="dd/MM/yyyy" Width="10%" SortIndex="0" AllowSort="true" SortOrder="GridColumnSortOrder.Ascending"/>
-            <DxGridCommandColumn Width="25%">
+            <DxGridCommandColumn Width="25%" NewButtonVisible="true" EditButtonVisible="true">
             </DxGridCommandColumn>
         </Columns>
+
         <TotalSummary>  
             <DxGridSummaryItem FieldName="ProductName" SummaryType="GridSummaryItemType.Count"/>
         </TotalSummary>
+        
         <EditFormTemplate Context="EditFormContext">
             <DxFormLayout CssClass="w-100">
                 <DxFormLayoutItem Caption="Име на продукта:" ColSpanMd="6">
