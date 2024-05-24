@@ -5,8 +5,9 @@ namespace SIS_Technology_InterviewProject.Pages;
 
 public partial class TestComponent
 {
+    
     private IEnumerable<Product>? productList;
-
+    DateTime DateTimeValue { get; set; }
     protected override async Task OnInitializedAsync()
     {
         await LoadProducts();
@@ -17,14 +18,24 @@ public partial class TestComponent
         productList = (await ProductService.GetAllProductsAsync()).ToList();
     }
 
-    private async Task OnRowInserting()
+    private async Task OnRowInserting(Product product)
     {
-        await Task.CompletedTask;
+        await ProductService.AddProductAsync(product);
     }
 
-    private async Task OnRowUpdating(GridEditModelSavingEventArgs e)
+    private async Task OnRowUpdating(GridEditModelSavingEventArgs p)
     {
-        await ProductService.UpdateProductAsync((Product)e.EditModel);
+        if (p.IsNew)
+        {
+            DateTimeValue = DateTime.Today;
+            await OnRowInserting((Product)p.EditModel);
+        }
+        else
+        {
+            var product = (Product)p.EditModel;
+            DateTimeValue = product.DateAdded;
+            await ProductService.UpdateProductAsync((Product)p.EditModel);
+        }
         await LoadProducts();
     }
 

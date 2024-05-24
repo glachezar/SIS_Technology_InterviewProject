@@ -20,6 +20,9 @@ else
             KeyFieldName="Id"
             EditModelSaving="OnRowUpdating"
             DataItemDeleting="OnRowDeleting"
+            ValidationEnabled="false"
+            ShowFilterRow="true"
+            ShowGroupPanel="true"
             KeyboardNavigationEnabled="true">
         <Columns>
 
@@ -30,6 +33,9 @@ else
             <DxGridCommandColumn Width="25%">
             </DxGridCommandColumn>
         </Columns>
+        <TotalSummary>  
+            <DxGridSummaryItem FieldName="ProductName" SummaryType="GridSummaryItemType.Count"/>
+        </TotalSummary>
         <EditFormTemplate Context="EditFormContext">
             <DxFormLayout CssClass="w-100">
                 <DxFormLayoutItem Caption="Име на продукта:" ColSpanMd="6">
@@ -43,7 +49,7 @@ else
                 </DxFormLayoutItem>
                 <DxFormLayoutItem Caption="Дата на добавяне:" ColSpanMd="6">
                     @EditFormContext.GetEditor("DateAdded")
-                </DxFormLayoutItem>
+                </DxFormLayoutItem> 
             </DxFormLayout>
         </EditFormTemplate>
     </DxGrid>
