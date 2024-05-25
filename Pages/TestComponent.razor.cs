@@ -10,6 +10,8 @@ public partial class TestComponent
 
     private DateTime DateTimeValue = DateTime.Today;
 
+    bool PanelVisible { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         await LoadProducts();
@@ -29,14 +31,15 @@ public partial class TestComponent
     {
         if (p.IsNew)
         {
-            DateTimeValue = DateTime.Today;
-            await OnRowInserting((Product)p.EditModel);
+            var product = (Product)p.EditModel;
+            product.DateAdded = DateTimeValue;
+            await OnRowInserting(product);
         }
         else
         {
             var product = (Product)p.EditModel;
-            DateTimeValue = product.DateAdded;
-            await ProductService.UpdateProductAsync((Product)p.EditModel);
+            product.DateAdded = DateTimeValue;
+            await ProductService.UpdateProductAsync(product);
         }
         await LoadProducts();
     }
@@ -46,5 +49,10 @@ public partial class TestComponent
         await ProductService.DeleteProductAsync((e.DataItem as Product).Id);
 
         await LoadProducts();
+    }
+
+    void OnDateChanged(DateTime newValue)
+    {
+        DateTimeValue = newValue;
     }
 }
