@@ -22,7 +22,11 @@ else
             ValidationEnabled="false"
             ShowFilterRow="true"
             ShowGroupPanel="true"
-            KeyboardNavigationEnabled="true">
+            KeyboardNavigationEnabled="true"
+            PagerNavigationMode="PagerNavigationMode.InputBox"
+            PageSizeSelectorVisible="true"
+            PageSizeSelectorAllRowsItemVisible="true"
+            PageSizeSelectorItems="@(new int[] { 5,10,20, 50, 100 })">
         <Columns>
 
             <DxGridDataColumn FieldName="ProductName" Caption="Име на продукта" MinWidth="100" SortIndex="3" AllowSort="true" />
@@ -49,7 +53,15 @@ else
                     @EditFormContext.GetEditor("UnitPrice")
                 </DxFormLayoutItem>
                 <DxFormLayoutItem Caption="Дата на добавяне:" ColSpanMd="6">
-                    @EditFormContext.GetEditor("DateAdded")
+                    <DxDateEdit Date="DateTimeValue"
+                                NullText="Не е избрана дата"
+                                DisplayFormat="dd/MM/yyyy"
+                                Format="dd/MM/yyyy"
+                                PickerDisplayMode="DatePickerDisplayMode.Auto"
+                                ScrollPickerFormat="dddd/MMMM/yyyy"
+                                MinDate="@(new DateTime(2010, 1, 1))"
+                                MaxDate="@(DateTime.Today)"
+                                DateChanged="@((DateTime newValue) => OnDateChanged(newValue))" />
                 </DxFormLayoutItem>
             </DxFormLayout>
         </EditFormTemplate>

@@ -16,53 +16,57 @@
 }
 else
 {
-        <DxGrid Data="@productList"
-                KeyFieldName="Id"
-                EditModelSaving="OnRowUpdating"
-                DataItemDeleting="OnRowDeleting"
-                ValidationEnabled="false"
-                ShowFilterRow="true"
-                ShowGroupPanel="true"
-                KeyboardNavigationEnabled="true">
-            <Columns>
+    <DxGrid Data="@productList"
+            KeyFieldName="Id"
+            EditModelSaving="OnRowUpdating"
+            DataItemDeleting="OnRowDeleting"
+            ValidationEnabled="false"
+            ShowFilterRow="true"
+            ShowGroupPanel="true"
+            KeyboardNavigationEnabled="true"
+            PagerNavigationMode="PagerNavigationMode.InputBox"
+            PageSizeSelectorVisible="true"
+            PageSizeSelectorAllRowsItemVisible="true"
+            PageSizeSelectorItems="@(new int[] { 5,10,20, 50, 100 })">
+        <Columns>
 
-                <DxGridDataColumn FieldName="ProductName" Caption="Име на продукта" MinWidth="100" SortIndex="3" AllowSort="true" />
-                <DxGridDataColumn FieldName="Category" Caption="Категория" Width="25%" SortIndex="1" AllowSort="true" />
-                <DxGridDataColumn FieldName="UnitPrice" Caption="Цена" DisplayFormat="C2" Width="10%" SortIndex="2" AllowSort="true" />
-                <DxGridDataColumn FieldName="DateAdded" Caption="Дата на добавяне / Актуализация" DisplayFormat="dd/MM/yyyy" Width="10%" SortIndex="0" AllowSort="true" SortOrder="GridColumnSortOrder.Ascending" />
-                <DxGridCommandColumn Width="25%" NewButtonVisible="true" EditButtonVisible="true">
-                </DxGridCommandColumn>
-            </Columns>
+            <DxGridDataColumn FieldName="ProductName" Caption="Име на продукта" MinWidth="100" SortIndex="3" AllowSort="true" />
+            <DxGridDataColumn FieldName="Category" Caption="Категория" Width="25%" SortIndex="1" AllowSort="true" />
+            <DxGridDataColumn FieldName="UnitPrice" Caption="Цена" DisplayFormat="C2" Width="10%" SortIndex="2" AllowSort="true" />
+            <DxGridDataColumn FieldName="DateAdded" Caption="Дата на добавяне" DisplayFormat="dd/MM/yyyy" Width="10%" SortIndex="0" AllowSort="true" SortOrder="GridColumnSortOrder.Ascending" />
+            <DxGridCommandColumn Width="25%" NewButtonVisible="true" EditButtonVisible="true">
+            </DxGridCommandColumn>
+        </Columns>
 
-            <TotalSummary>
-                <DxGridSummaryItem FieldName="ProductName" SummaryType="GridSummaryItemType.Count" />
-            </TotalSummary>
+        <TotalSummary>
+            <DxGridSummaryItem FieldName="ProductName" SummaryType="GridSummaryItemType.Count" />
+        </TotalSummary>
 
-            <EditFormTemplate Context="EditFormContext">
-                <DxFormLayout CssClass="w-100">
-                    <DxFormLayoutItem Caption="Име на продукта:" ColSpanMd="6">
-                        @EditFormContext.GetEditor("ProductName")
-                    </DxFormLayoutItem>
-                    <DxFormLayoutItem Caption="Категория:" ColSpanMd="6">
-                        @EditFormContext.GetEditor("Category")
-                    </DxFormLayoutItem>
-                    <DxFormLayoutItem Caption="Цена:" ColSpanMd="6">
-                        @EditFormContext.GetEditor("UnitPrice")
-                    </DxFormLayoutItem>
-                    <DxFormLayoutItem Caption="Дата на добавяне:" ColSpanMd="6">
-                        <DxDateEdit Date="DateTimeValue"
-                                    NullText="Не е избрана дата"
-                                    DisplayFormat="dd/MM/yyyy"
-                                    Format="dd/MM/yyyy"
-                                    PickerDisplayMode="DatePickerDisplayMode.ScrollPicker"
-                                    ScrollPickerFormat="dddd/MMMM/yyyy"
-                                    MinDate="@(new DateTime(2010, 1, 1))"
-                                    MaxDate="@(DateTime.Today)"
-                                    DateChanged="@((DateTime newValue) => OnDateChanged(newValue))" />
-                    </DxFormLayoutItem>
-                </DxFormLayout>
-            </EditFormTemplate>
-        </DxGrid>
+        <EditFormTemplate Context="EditFormContext">
+            <DxFormLayout CssClass="w-100">
+                <DxFormLayoutItem Caption="Име на продукта:" ColSpanMd="6">
+                    @EditFormContext.GetEditor("ProductName")
+                </DxFormLayoutItem>
+                <DxFormLayoutItem Caption="Категория:" ColSpanMd="6">
+                    @EditFormContext.GetEditor("Category")
+                </DxFormLayoutItem>
+                <DxFormLayoutItem Caption="Цена:" ColSpanMd="6">
+                    @EditFormContext.GetEditor("UnitPrice")
+                </DxFormLayoutItem>
+                <DxFormLayoutItem Caption="Дата на добавяне:" ColSpanMd="6">
+                    <DxDateEdit Date="DateTimeValue"
+                                NullText="Не е избрана дата"
+                                DisplayFormat="dd/MM/yyyy"
+                                Format="dd/MM/yyyy"
+                                PickerDisplayMode="DatePickerDisplayMode.Auto"
+                                ScrollPickerFormat="dddd/MMMM/yyyy"
+                                MinDate="@(new DateTime(2010, 1, 1))"
+                                MaxDate="@(DateTime.Today)"
+                                DateChanged="@((DateTime newValue) => OnDateChanged(newValue))" />
+                </DxFormLayoutItem>
+            </DxFormLayout>
+        </EditFormTemplate>
+    </DxGrid>
 }
 
 
