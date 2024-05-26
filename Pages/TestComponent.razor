@@ -4,36 +4,57 @@
 @using DevExpress.Blazor.Grid
 @inject ProductService ProductService
 
-<h3>TestComponent</h3>
-
-<h1>Products</h1>
-
-<p>This component demonstrates fetching data from a service.</p>
-
 @if (productList == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <DxChart Data="@productList">
-        <DxChartTitle Text="Average Price by Category">
-        </DxChartTitle>
-        <DxChartCommonSeries NameField="@((Product p) => p.Category)"
-                             ArgumentField="@((Product p) => p.Category)"
-                             ValueField="@((Product p) => p.UnitPrice)"
-                             SeriesType="ChartSeriesType.Bar"
-                             SummaryMethod="Enumerable.Average">
-        </DxChartCommonSeries>
-        <DxChartLegend 
-            Orientation="@Orientation.Horizontal"
-            HorizontalAlignment="@HorizontalAlignment.Center"
-            Position="RelativePosition.Outside"/>
-    </DxChart>
+    <div class="mb-5 mt-3">
+        <DxChart Data="@productList">
+            <DxChartTitle Text="Средна цена по категория">
+            </DxChartTitle>
+            <DxChartTooltip Enabled="true"
+                            Position="RelativePosition.Outside">
+                <div style="margin: 0.75rem">
+                    <div class="font-weight-bold">@context.Point.Argument</div>
+                    <div>Средна цена: @($"${context.Point.Value:0.00}")</div>
+                </div>
+            </DxChartTooltip>
+            <DxChartCommonSeries NameField="@((Product p) => p.Category)"
+                                 ArgumentField="@((Product p) => p.Category)"
+                                 ValueField="@((Product p) => p.UnitPrice)"
+                                 SeriesType="ChartSeriesType.Bar"
+                                 SummaryMethod="Enumerable.Average">
+            </DxChartCommonSeries>
+            <DxChartLegend Orientation="@Orientation.Horizontal"
+                           HorizontalAlignment="@HorizontalAlignment.Center"
+                           Position="RelativePosition.Outside" />
+        </DxChart>
+    </div>
 
-    <DxPieChart Data="@productList">
-
-    </DxPieChart>
+    <div>
+        <DxPieChart Data="@categoryProductCountStatistics">
+            <DxChartTitle Text="Брой продукти по категория">
+            </DxChartTitle>
+            <DxChartTooltip Enabled="true"
+                            Position="RelativePosition.Outside">
+                <div style="margin: 0.75rem">
+                    <div class="font-weight-bold">@context.Point.Argument</div>
+                    <div>Брой продукти: @($"{context.Point.Value:0}")</div>
+                </div>
+            </DxChartTooltip>
+            <DxPieChartSeries T="CategoryProductCountStatistic"
+                              TArgument="string"
+                              TValue="int"
+                              ArgumentField="p => p.Category"
+                              ValueField="p => p.Count">
+            </DxPieChartSeries>
+            <DxChartLegend Orientation="@Orientation.Horizontal"
+                           HorizontalAlignment="@HorizontalAlignment.Center"
+                           Position="RelativePosition.Outside" />
+        </DxPieChart>
+    </div>
 }
 
 
