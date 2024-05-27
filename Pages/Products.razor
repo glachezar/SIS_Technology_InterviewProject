@@ -5,9 +5,9 @@
 
 <PageTitle>ALL Products</PageTitle>
 
-<h1>Products</h1>
+<h1 style="text-align:center">Products</h1>
 
-<p>This component demonstrates fetching data from a service.</p>
+<h3 style="text-align:center">This component demonstrates fetching data from a service.</h3>
 
 <DxLoadingPanel @bind-Visible="PanelVisible"
                 IsContentBlocked="true"
@@ -24,6 +24,7 @@
             KeyboardNavigationEnabled="true"
             PagerNavigationMode="PagerNavigationMode.InputBox"
             PageSizeSelectorVisible="true"
+            PageSize="20"
             PageSizeSelectorAllRowsItemVisible="true"
             PageSizeSelectorItems="@(new int[] { 5,10,20, 50, 100 })">
         <Columns>
