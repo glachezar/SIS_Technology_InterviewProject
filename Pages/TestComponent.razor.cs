@@ -9,9 +9,11 @@ public partial class TestComponent
 
     private IEnumerable<CategoryProductCountStatistic> categoryProductCountStatistics;
 
+    bool PanelVisible { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
-        await LoadProducts();
+        await LoadGridData();
         categoryProductCountStatistics = GetCategoryCounts();
     }
 
@@ -30,6 +32,14 @@ public partial class TestComponent
             .ToList();
 
         return categoryCounts;
+    }
+
+    async Task LoadGridData()
+    {
+        PanelVisible = true;
+        await Task.Delay(1000);
+        await LoadProducts();
+        PanelVisible = false;
     }
 }
 

@@ -9,12 +9,11 @@
 
 <p>This component demonstrates fetching data from a service.</p>
 
-@if (productList == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
+<DxLoadingPanel @bind-Visible="PanelVisible"
+                IsContentBlocked="true"
+                ApplyBackgroundShading="true"
+                IndicatorAreaVisible="false"
+                Text="Fetching Data...">
     <DxGrid Data="@productList"
             KeyFieldName="Id"
             EditModelSaving="OnRowUpdating"
@@ -66,4 +65,4 @@ else
             </DxFormLayout>
         </EditFormTemplate>
     </DxGrid>
-}
+</DxLoadingPanel>

@@ -4,15 +4,14 @@
 @using DevExpress.Blazor.Grid
 @inject ProductService ProductService
 
-@if (productList == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
+<DxLoadingPanel @bind-Visible="PanelVisible"
+                IsContentBlocked="true"
+                ApplyBackgroundShading="true"
+                IndicatorAreaVisible="false"
+                Text="Fetching Data...">
     <div class="mb-5 mt-3">
         <DxChart Data="@productList">
-            <DxChartTitle Text="Средна цена по категория">
+            <DxChartTitle Text="Average price by category">
             </DxChartTitle>
             <DxChartTooltip Enabled="true"
                             Position="RelativePosition.Outside">
@@ -35,7 +34,7 @@ else
 
     <div>
         <DxPieChart Data="@categoryProductCountStatistics">
-            <DxChartTitle Text="Брой продукти по категория">
+            <DxChartTitle Text="Number of products by category">
             </DxChartTitle>
             <DxChartTooltip Enabled="true"
                             Position="RelativePosition.Outside">
@@ -55,6 +54,8 @@ else
                            Position="RelativePosition.Outside" />
         </DxPieChart>
     </div>
-}
+</DxLoadingPanel>
+
+
 
 

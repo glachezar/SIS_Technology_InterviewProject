@@ -9,8 +9,10 @@ public partial class Products
 
     private DateTime DateTimeValue = DateTime.Today;
 
+    bool PanelVisible { get; set; }
+
     protected override async Task OnInitializedAsync() =>
-        await LoadProducts();
+        await LoadGridData();
 
     private async Task LoadProducts() =>
         productList = (await ProductService.GetAllProductsAsync()).ToList();
@@ -47,4 +49,12 @@ public partial class Products
 
     void OnDateChanged(DateTime newValue) =>
         DateTimeValue = newValue;
+
+    async Task LoadGridData()
+    {
+        PanelVisible = true;
+        await Task.Delay(1000);
+        await LoadProducts();
+        PanelVisible = false;
+    }
 }
