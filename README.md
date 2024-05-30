@@ -120,3 +120,4 @@ INSERT INTO Products (ProductName, Category, UnitPrice, DateAdded) VALUES
 -- Query the data to verify the insertion
 SELECT * FROM Products;
 
+.
