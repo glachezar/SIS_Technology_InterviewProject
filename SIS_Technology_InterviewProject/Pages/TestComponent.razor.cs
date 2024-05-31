@@ -1,4 +1,4 @@
-using SIS_Technology_InterviewProject.Data;
+using Domain.Entities;
 using DevExpress.Blazor;
 
 namespace SIS_Technology_InterviewProject.Pages;
@@ -18,7 +18,7 @@ public partial class TestComponent
     }
 
     private async Task LoadProducts() =>
-        productList = (await ProductService.GetAllProductsAsync()).ToList();
+        productList = await ProductService.GetAllProductsAsync();
 
     public IEnumerable<CategoryProductCountStatistic> GetCategoryCounts()
     {

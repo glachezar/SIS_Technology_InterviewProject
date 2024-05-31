@@ -1,8 +1,9 @@
 ﻿@page "/Test"
 
-@using SIS_Technology_InterviewProject.Data
+@using Application.Interfaces
+@using Domain.Entities
 @using DevExpress.Blazor.Grid
-@inject ProductService ProductService
+@inject IProductService ProductService
 
 <DxLoadingPanel @bind-Visible="PanelVisible"
                 IsContentBlocked="true"
