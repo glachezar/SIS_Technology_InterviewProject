@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIS_Technology_InterviewProject", "..\SIS_Technology_InterviewProject.csproj", "{651FCE31-38FA-4500-B3B8-24103BDF5A03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIS_Technology_InterviewProject", "SIS_Technology_InterviewProject\SIS_Technology_InterviewProject.csproj", "{651FCE31-38FA-4500-B3B8-24103BDF5A03}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{5588CB3F-2B19-4C74-AC11-9B1D70CD0A63}"
 EndProject
