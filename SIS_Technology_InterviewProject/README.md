@@ -2,8 +2,10 @@
 
 # This project is created to cover Interview Assignment to showcase knowledge in Blazor, Dapper, DevExpress and MS SQL.
 
-#This is the database SQL used for testing.
+# 31/05/2024 - Project updated to Clean Architecture.
 
+
+# This is the database SQL used for testing.
 CREATE DATABASE BlazorDapperDb
 USE BlazorDapperDb
 CREATE TABLE Products (
@@ -14,7 +16,7 @@ CREATE TABLE Products (
     DateAdded DATE NOT NULL
 );
 
--- Insert data into the Products table
+# Insert data into the Products table
 INSERT INTO Products (ProductName, Category, UnitPrice, DateAdded) VALUES
 ('Apple iPhone 13', 'Electronics', 799.00, '2023-09-14'),
 ('Samsung Galaxy S21', 'Electronics', 699.99, '2022-01-29'),
@@ -117,7 +119,5 @@ INSERT INTO Products (ProductName, Category, UnitPrice, DateAdded) VALUES
 ('Levoit Air Purifier', 'Home Appliances', 149.99, '2022-09-25'),
 ('Dyson Air Multiplier', 'Home Appliances', 299.99, '2021-12-03');
 
--- Query the data to verify the insertion
+# Query the data to verify the insertion
 SELECT * FROM Products;
-
-.
