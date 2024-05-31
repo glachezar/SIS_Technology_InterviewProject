@@ -1,5 +1,4 @@
 using Domain.Entities;
-using DevExpress.Blazor;
 
 namespace SIS_Technology_InterviewProject.Pages;
 
@@ -37,7 +36,7 @@ public partial class TestComponent
     async Task LoadGridData()
     {
         PanelVisible = true;
-        await Task.Delay(1000);
+        //await Task.Delay(1000);
         await LoadProducts();
         PanelVisible = false;
     }

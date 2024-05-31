@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{651FCE31-38FA-4500-B3B8-24103BDF5A03}|SIS_Technology_InterviewProject\\SIS_Technology_InterviewProject.csproj|e:\\programing\\myprojects\\blazorapps\\interviewproject\\sis_technology_interviewproject\\pages\\testcomponent.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{651FCE31-38FA-4500-B3B8-24103BDF5A03}|SIS_Technology_InterviewProject\\SIS_Technology_InterviewProject.csproj|solutionrelative:sis_technology_interviewproject\\pages\\testcomponent.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{651FCE31-38FA-4500-B3B8-24103BDF5A03}|SIS_Technology_InterviewProject\\SIS_Technology_InterviewProject.csproj|e:\\programing\\myprojects\\blazorapps\\interviewproject\\sis_technology_interviewproject\\pages\\testcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{651FCE31-38FA-4500-B3B8-24103BDF5A03}|SIS_Technology_InterviewProject\\SIS_Technology_InterviewProject.csproj|solutionrelative:sis_technology_interviewproject\\pages\\testcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{651FCE31-38FA-4500-B3B8-24103BDF5A03}|SIS_Technology_InterviewProject\\SIS_Technology_InterviewProject.csproj|e:\\programing\\myprojects\\blazorapps\\interviewproject\\sis_technology_interviewproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{651FCE31-38FA-4500-B3B8-24103BDF5A03}|SIS_Technology_InterviewProject\\SIS_Technology_InterviewProject.csproj|solutionrelative:sis_technology_interviewproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{80E9A1FE-548E-43EC-83CC-964672CC958B}|Infrastructure\\Infrastructure.csproj|e:\\programing\\myprojects\\blazorapps\\interviewproject\\infrastructure\\di.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80E9A1FE-548E-43EC-83CC-964672CC958B}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\di.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,8 +58,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestComponent.razor.cs",
+              "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\SIS_Technology_InterviewProject\\Pages\\TestComponent.razor.cs",
+              "RelativeDocumentMoniker": "SIS_Technology_InterviewProject\\Pages\\TestComponent.razor.cs",
+              "ToolTip": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\SIS_Technology_InterviewProject\\Pages\\TestComponent.razor.cs*",
+              "RelativeToolTip": "SIS_Technology_InterviewProject\\Pages\\TestComponent.razor.cs*",
+              "ViewState": "AQIAABoAAAAAAAAAAAAuwCcAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T11:52:52.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestComponent.razor",
+              "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\SIS_Technology_InterviewProject\\Pages\\TestComponent.razor",
+              "RelativeDocumentMoniker": "SIS_Technology_InterviewProject\\Pages\\TestComponent.razor",
+              "ToolTip": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\SIS_Technology_InterviewProject\\Pages\\TestComponent.razor",
+              "RelativeToolTip": "SIS_Technology_InterviewProject\\Pages\\TestComponent.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-31T11:51:53.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\SIS_Technology_InterviewProject\\Program.cs",
+              "RelativeDocumentMoniker": "SIS_Technology_InterviewProject\\Program.cs",
+              "ToolTip": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\SIS_Technology_InterviewProject\\Program.cs",
+              "RelativeToolTip": "SIS_Technology_InterviewProject\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T11:49:57.401Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -69,12 +120,8 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "DI.cs",
               "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\Infrastructure\\DI.cs",
               "RelativeDocumentMoniker": "Infrastructure\\DI.cs",
@@ -87,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\Infrastructure\\Dapper\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Dapper\\Repositories\\ProductRepository.cs",
@@ -95,12 +142,11 @@
               "RelativeToolTip": "Infrastructure\\Dapper\\Repositories\\ProductRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T11:42:59.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T11:42:59.025Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SqlConstants.cs",
               "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\Infrastructure\\Dapper\\SqlConstants.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Dapper\\SqlConstants.cs",
@@ -108,12 +154,11 @@
               "RelativeToolTip": "Infrastructure\\Dapper\\SqlConstants.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T11:41:10.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T11:41:10.875Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "DbContext.cs",
               "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\Infrastructure\\Dapper\\DbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Dapper\\DbContext.cs",
@@ -121,12 +166,11 @@
               "RelativeToolTip": "Infrastructure\\Dapper\\DbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T11:36:11.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T11:36:11.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "ProductService.cs",
               "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\Application\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\ProductService.cs",
@@ -134,12 +178,11 @@
               "RelativeToolTip": "Application\\Services\\ProductService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T10:31:28.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T10:31:28.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "IProductService.cs",
               "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\Application\\Interfaces\\IProductService.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IProductService.cs",
@@ -147,12 +190,11 @@
               "RelativeToolTip": "Application\\Interfaces\\IProductService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T10:28:33.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T10:28:33.912Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\Application\\Interfaces\\IProductRepository.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IProductRepository.cs",
@@ -160,12 +202,11 @@
               "RelativeToolTip": "Application\\Interfaces\\IProductRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T10:26:29.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T10:26:29.057Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "DI.cs",
               "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\Application\\DI.cs",
               "RelativeDocumentMoniker": "Application\\DI.cs",
@@ -173,12 +214,11 @@
               "RelativeToolTip": "Application\\DI.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T10:25:38.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T10:25:38.349Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Product.cs",
               "DocumentMoniker": "E:\\Programing\\MyProjects\\BlazorApps\\InterviewProject\\Domain\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Product.cs",
@@ -186,8 +226,7 @@
               "RelativeToolTip": "Domain\\Entities\\Product.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T10:22:54.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T10:22:54.942Z"
             }
           ]
         }

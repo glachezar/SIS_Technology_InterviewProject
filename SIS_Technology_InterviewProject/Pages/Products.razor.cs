@@ -1,5 +1,5 @@
 using DevExpress.Blazor;
-using SIS_Technology_InterviewProject.Data;
+using Domain.Entities;
 
 namespace SIS_Technology_InterviewProject.Pages;
 
@@ -19,7 +19,7 @@ public partial class Products
 
     private async Task OnRowInserting(Product product)
     {
-        await ProductService.AddProductAsync(product);
+        await ProductService.CreateProductAsync(product);
         await LoadProducts();
     }
 
@@ -53,7 +53,7 @@ public partial class Products
     async Task LoadGridData()
     {
         PanelVisible = true;
-        await Task.Delay(1000);
+        //await Task.Delay(1000);
         await LoadProducts();
         PanelVisible = false;
     }
