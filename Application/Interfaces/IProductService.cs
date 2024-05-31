@@ -2,19 +2,19 @@
 
 namespace Application.Interfaces;
 
-public interface IProductRepository
+public interface IProductService
 {
-    // Create
-    public Task<int> AddProductAsync(Product product);
+    //Create
+    public Task<int> CreateProductAsync(Product product);
 
-    // Read
-    public Task<Product> GetProductByIdAsync(int id);
-
+    //Read
     public Task<IEnumerable<Product>> GetAllProductsAsync();
 
-    // Update
+    public Task<Product> GetProductByIdAsync(int id);
+
+    //Update
     public Task<int> UpdateProductAsync(Product product);
 
-    // Delete
+    //Delete
     public Task<int> DeleteProductAsync(int id);
 }
