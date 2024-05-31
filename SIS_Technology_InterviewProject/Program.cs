@@ -1,11 +1,13 @@
-using SIS_Technology_InterviewProject.Data;
+using Application;
+using Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<ProductService>();
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure();
 builder.Services.AddDevExpressBlazor(config =>
 {
     config.BootstrapVersion = DevExpress.Blazor.BootstrapVersion.v5;
