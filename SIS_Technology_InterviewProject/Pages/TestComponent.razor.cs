@@ -1,4 +1,5 @@
 using Domain.Entities;
+using SIS_Technology_InterviewProject.Data.Product;
 
 namespace SIS_Technology_InterviewProject.Pages;
 
@@ -40,10 +41,4 @@ public partial class TestComponent
         await LoadProducts();
         PanelVisible = false;
     }
-}
-
-public class CategoryProductCountStatistic
-{
-    public string Category { get; set; } = string.Empty;
-    public int Count { get; set; }
 }
